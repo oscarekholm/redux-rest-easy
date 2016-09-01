@@ -1,0 +1,54 @@
+{
+  "name": "redux-rest-easy",
+  "version": "0.1.0",
+  "description": "A simple Redux middleware for declarative data fetching - helps you REST easy",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "prepublish": "npm run build",
+    "watch": "babel --watch src -d lib",
+    "lint": "standard src/**/*"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-export-extensions",
+      "transform-object-rest-spread"
+    ]
+  },
+  "files": [
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarekholm/redux-rest-easy.git"
+  },
+  "keywords": [
+    "redux",
+    "rest",
+    "fetch"
+  ],
+  "author": "Oscar Ekholm <i@oscarekholm.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oscarekholm/redux-rest-easy/issues"
+  },
+  "homepage": "https://github.com/oscarekholm/redux-rest-easy#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-transform-export-extensions": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.14.0",
+    "standard": "^8.0.0"
+  },
+  "dependencies": {
+    "redux-thunk": "^2.1.0"
+  }
+}
