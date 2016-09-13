@@ -1,6 +1,6 @@
 {
   "name": "redux-rest-easy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple Redux middleware for declarative data fetching - helps you REST easy",
   "main": "lib/index.js",
   "scripts": {
