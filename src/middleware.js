@@ -1,4 +1,5 @@
 import { FETCH } from './constants'
+import { Request } from './request'
 
 // Available response types for Response
 const FETCH_RESPONSE_TYPES = ['arrayBuffer', 'blob', 'formData', 'json', 'text']
@@ -64,7 +65,7 @@ const middleware = store => next => action => {
 
   const request = input instanceof window.Request
     ? input
-    : new window.Request(constructUrl(input, options), options)
+    : new Request(constructUrl(input, options), options)
 
   const meta = {
     originalPayload: action.payload,
