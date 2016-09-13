@@ -21,6 +21,7 @@ const constructUrl = (baseUrl, { query } = {}) => {
 
   const queryString = Array.from(query.entries())
     .map(([k, v]) => `${k}=${v}`)
+    .join('&')
 
   return `${baseUrl}?${queryString}`
 }
