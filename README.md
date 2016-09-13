@@ -38,7 +38,7 @@ const getAnimals = () => fetch('GET_ANIMALS', '/api/animals')
 
 store.dispatch(getAnimals())
   // Since redux-rest-easy in conjunction with redux-thunk makes use of
-  promises it's easy to react to a fulfilled API call everywhere
+  // promises it's easy to react to a fulfilled API call everywhere
   .then(({ payload, meta, error }) => {
     if (error) return
 
