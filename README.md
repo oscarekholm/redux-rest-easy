@@ -4,7 +4,7 @@ A simple Redux middleware for declarative data fetching - helps you REST easy ðŸ
 
 ## Requirements
 
-Except for [Redux](https://github.com/reactjs/redux), Redux Rest Easy depends on [Redux Thunk](https://github.com/gaearon/redux-thunk), which middleware has to be included _after_ Redux Rest Easy in your store's middlewares.
+Except for [Redux](https://github.com/reactjs/redux), Redux Rest Easy depends only on [Redux Thunk](https://github.com/gaearon/redux-thunk), which middleware has to be included _after_ Redux Rest Easy in your store's middlewares.
 
 ## Installation
 
@@ -85,7 +85,7 @@ react on bulk actions having finished running:
 
 const getFelines = () => async dispatch => {
   const lions = await dispatch(fetch('GET_LIONS', '/api/animals/lions'))
-  const tigers = await dispatch(fetch('GET_LIONS', '/api/animals/tigers'))
+  const tigers = await dispatch(fetch('GET_TIGERS', '/api/animals/tigers'))
 
   if (lions.error || tigers.error) throw new Error('Failed loading felines')
 
